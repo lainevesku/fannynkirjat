@@ -1,0 +1,71 @@
+.uibutton {
+    background-color: #cccccc;
+    color: #000000;
+    border: none;
+    outline: none;
+    padding: 0.7em 1.5em;
+    margin: 0.5em;
+    border-radius: 0.2em;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 2px;
+    font-weight: bold;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.uibutton:active {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px;
+    /* mahdollinen napin värin vaihto painalluksesta
+    background-color: #bbbbbb; */
+}
+
+.uibutton:hover {
+    opacity: 1;
+}
+
+.uibutton--primary {
+    background-color: #333333;
+    color: lightblue;
+}
+
+.uibutton--primary:active {
+    background-color: #413f3f;
+    opacity: 0.8;
+}
+
+.uibutton--secondary {
+    background-color: lightblue;
+    color: #333333;
+}
+
+.uibutton--secondary:active {
+    background-color: lightskyblue;
+    opacity: 0.8;
+}
+
+.uibutton:disabled {
+    background-color: #cccccc;
+    color: #999;
+    box-shadow: none;
+}
+
+.uibutton--floating {
+    position: fixed;
+    bottom: 4rem;
+    right: 1rem;
+    border-radius: 50%;
+    font-size: 3.5em; 
+    height: 1.5em;
+    width: 1.5em;
+    padding: 0.5em;
+}
+
+.uibutton__container {
+    position: relative;
+}
+
+.uibutton__appcontainer > div {
+    transform: translateZ(0);
+}
