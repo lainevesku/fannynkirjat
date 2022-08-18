@@ -1,9 +1,13 @@
-import './app.scss';
+import styles from './app.module.scss';
+import Kirja from '../kirja/kirja';
 
 function App() {
   return (
-    <div>
-      Hei maailma!
+    <div className={styles.app}>
+      <Kirja />
+      <Kirja />
+      <Kirja />
+      <Kirja />
     </div>
   );
 }
