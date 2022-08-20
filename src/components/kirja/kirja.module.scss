@@ -13,3 +13,17 @@
     padding: $kirja-padding;
     font-size: 120%;
 }
+
+.kirja_linkki {
+    max-width: $kirja-linkki-width;
+    min-width: $kirja-linkki-width;
+    background: $kirja-linkki-background;
+    color: $kirja-linkki-text;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.kirja:hover .kirja_linkki {
+    display: flex;
+}

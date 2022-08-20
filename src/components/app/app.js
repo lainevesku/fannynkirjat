@@ -3,16 +3,19 @@ import Header from '../header/header';
 import Content from '../content/content';
 import Kirjat from '../../routes/kirjat/kirjat';
 import Menu from '../menu/menu';
+import { ButtonAppContainer } from '../../shared/uibuttons/uibuttons';
 
 function App() {
   return (
-    <div className={styles.app}>
-      <Header />
-      <Content>
-        <Kirjat />
-      </Content>
-      <Menu />
-    </div>
+    <ButtonAppContainer>
+      <div className={styles.app}>
+        <Header />
+        <Content>
+          <Kirjat />
+        </Content>
+        <Menu />
+      </div>
+    </ButtonAppContainer>
   );
 }
 
