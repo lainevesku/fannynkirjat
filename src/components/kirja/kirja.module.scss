@@ -1,7 +1,8 @@
+@import '../../assets/styles/config';
+
 .kirja {
     display: flex;
-    border-bottom: 1px solid black;
-    color: gray;
+    border-bottom: 1px solid $kirja-border-color;
     
 }
 
@@ -9,7 +10,6 @@
     display: flex;
     flex: content;
     justify-content: space-between;
-    padding: 0.75rem;
+    padding: $kirja-padding;
     font-size: 120%;
-    font-weight: bold;
 }
