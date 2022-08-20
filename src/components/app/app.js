@@ -1,13 +1,17 @@
 import styles from './app.module.scss';
-import Kirja from '../kirja/kirja';
+import Header from '../header/header';
+import Content from '../content/content';
+import Kirjat from '../../routes/kirjat/kirjat';
+import Menu from '../menu/menu';
 
 function App() {
   return (
     <div className={styles.app}>
-      <Kirja />
-      <Kirja />
-      <Kirja />
-      <Kirja />
+      <Header />
+      <Content>
+        <Kirjat />
+      </Content>
+      <Menu />
     </div>
   );
 }
