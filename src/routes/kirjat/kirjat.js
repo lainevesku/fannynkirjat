@@ -10,7 +10,7 @@ function Kirjat(props) {
                 <Kirja />
                 <Kirja />
                 <Kirja />
-                <FloatingButton><MdMenuBook /></FloatingButton>
+                <FloatingButton secondary><MdMenuBook /></FloatingButton>
             </div>
         </ButtonContainer>
     );

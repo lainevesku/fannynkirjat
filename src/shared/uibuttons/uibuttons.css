@@ -26,22 +26,32 @@
 }
 
 .uibutton--primary {
-    background-color: #333333;
-    color: lightblue;
+    background-color: #d494b1;
+    color: #ffffff;
 }
 
 .uibutton--primary:active {
-    background-color: #413f3f;
+    background-color: #d48aac;
     opacity: 0.8;
 }
 
 .uibutton--secondary {
-    background-color: lightblue;
-    color: #333333;
+    background-color: #e08d34;
+    color: #ffffff;
 }
 
 .uibutton--secondary:active {
-    background-color: lightskyblue;
+    background-color: #df882b;
+    opacity: 0.8;
+}
+
+.uibutton--danger {
+    background-color: #fa0e0e;
+    color: #000000;
+}
+
+.uibutton--danger:active {
+    background-color: #ff0000;
     opacity: 0.8;
 }
 
