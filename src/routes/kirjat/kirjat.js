@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Kirja from "../../components/kirja/kirja";
 import { FloatingButton, ButtonContainer } from "../../shared/uibuttons/uibuttons";
 import { MdMenuBook } from 'react-icons/md';
@@ -10,7 +11,7 @@ function Kirjat(props) {
         <ButtonContainer>
             <div>
                 { kirjat }
-                <FloatingButton primary><MdMenuBook /></FloatingButton>
+                <Link to="/add"><FloatingButton primary><MdMenuBook /></FloatingButton></Link>
             </div>
         </ButtonContainer>
     );

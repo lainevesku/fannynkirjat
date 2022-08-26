@@ -5,6 +5,7 @@ import Content from '../content/content';
 import Kirjat from '../../routes/kirjat/kirjat';
 import Arvostelut from '../../routes/arvostelut/arvostelut';
 import Settings from '../../routes/settings/settings';
+import AddKirja from '../../routes/addkirja/addkirja';
 import Menu from '../menu/menu';
 import { ButtonAppContainer } from '../../shared/uibuttons/uibuttons';
 import data from '../../testdata';
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route path="/settings">
               <Settings />
+            </Route>
+            <Route path="/add">
+              <AddKirja />
             </Route>
           </Content>
           <Menu />
