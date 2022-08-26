@@ -3,13 +3,13 @@ import { FloatingButton, ButtonContainer } from "../../shared/uibuttons/uibutton
 import { MdMenuBook } from 'react-icons/md';
 
 function Kirjat(props) {
+
+    const kirjat = props.data.map((kirja) => <Kirja key={kirja.id}data={kirja} />);
+
     return(
         <ButtonContainer>
             <div>
-                <Kirja />
-                <Kirja />
-                <Kirja />
-                <Kirja />
+                { kirjat }
                 <FloatingButton primary><MdMenuBook /></FloatingButton>
             </div>
         </ButtonContainer>

@@ -5,13 +5,22 @@
     border-bottom: 1px solid $kirja-border-color;
     
 }
-
+/*
 .kirja_data {
     display: flex;
     flex: content;
     justify-content: space-between;
     padding: $kirja-padding;
     font-size: 120%;
+}
+*/
+.kirja_data {
+    display: flex;
+    flex: content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $kirja-padding;
 }
 
 .kirja_linkki {

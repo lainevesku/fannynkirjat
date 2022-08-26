@@ -7,6 +7,7 @@ import Arvostelut from '../../routes/arvostelut/arvostelut';
 import Settings from '../../routes/settings/settings';
 import Menu from '../menu/menu';
 import { ButtonAppContainer } from '../../shared/uibuttons/uibuttons';
+import data from '../../testdata';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Header />
           <Content>
             <Route exact path="/">
-              <Kirjat />
+              <Kirjat data={data} />
             </Route>
             <Route path="/arvostelut">
               <Arvostelut />
