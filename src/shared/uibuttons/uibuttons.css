@@ -66,10 +66,10 @@
     bottom: 4rem;
     right: 1rem;
     border-radius: 50%;
-    font-size: 3em; 
-    height: 1.5em;
-    width: 1.5em;
-    padding: 0.5em; 
+    font-size: 1.2em;
+    height: 3em;
+    width: 3em;
+    padding: 0.5em;
 }
 
 .uibutton__container {
