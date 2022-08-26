@@ -1,10 +1,10 @@
 import KirjaForm from "../../components/kirjaform/kirjaform";
 
-function AddKirja() {
+function AddKirja(props) {
     return(
         <>
         <h2>Uuden kirjan lisääminen</h2>
-        <KirjaForm />
+        <KirjaForm onKirjaSubmit={props.onKirjaSubmit}/>
         </>
     );
 }

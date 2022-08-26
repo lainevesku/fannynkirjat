@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import styles from './app.module.scss';
 import Header from '../header/header';
@@ -8,9 +9,23 @@ import Settings from '../../routes/settings/settings';
 import AddKirja from '../../routes/addkirja/addkirja';
 import Menu from '../menu/menu';
 import { ButtonAppContainer } from '../../shared/uibuttons/uibuttons';
-import data from '../../testdata';
+import testdata from '../../testdata';
 
 function App() {
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    setData(testdata);
+  }, []);
+
+  const handleKirjaSubmit = (newkirja) => {
+    let storeddata = data.slice();
+    storeddata.push(newkirja);
+    setData(storeddata);
+  }
+
+
   return (
     <ButtonAppContainer>
       <div className={styles.app}>
@@ -27,7 +42,7 @@ function App() {
               <Settings />
             </Route>
             <Route path="/add">
-              <AddKirja />
+              <AddKirja onKirjaSubmit={handleKirjaSubmit} />
             </Route>
           </Content>
           <Menu />
