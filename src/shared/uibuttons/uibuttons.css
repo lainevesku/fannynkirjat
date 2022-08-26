@@ -26,22 +26,22 @@
 }
 
 .uibutton--primary {
-    background-color: #d494b1;
+    background-color: rgb(9, 7, 46);
     color: #ffffff;
 }
 
 .uibutton--primary:active {
-    background-color: #d48aac;
+    background-color: rgb(9, 7, 46);
     opacity: 0.8;
 }
 
 .uibutton--secondary {
-    background-color: #e08d34;
+    background-color: orange;
     color: #ffffff;
 }
 
 .uibutton--secondary:active {
-    background-color: #df882b;
+    background-color: orange;
     opacity: 0.8;
 }
 
@@ -66,10 +66,10 @@
     bottom: 4rem;
     right: 1rem;
     border-radius: 50%;
-    font-size: 3.5em; 
+    font-size: 3em; 
     height: 1.5em;
     width: 1.5em;
-    padding: 0.5em;
+    padding: 0.5em; 
 }
 
 .uibutton__container {

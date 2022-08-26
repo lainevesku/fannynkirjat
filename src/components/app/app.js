@@ -3,9 +3,9 @@ import styles from './app.module.scss';
 import Header from '../header/header';
 import Content from '../content/content';
 import Kirjat from '../../routes/kirjat/kirjat';
-import Menu from '../menu/menu';
 import Arvostelut from '../../routes/arvostelut/arvostelut';
 import Settings from '../../routes/settings/settings';
+import Menu from '../menu/menu';
 import { ButtonAppContainer } from '../../shared/uibuttons/uibuttons';
 
 function App() {

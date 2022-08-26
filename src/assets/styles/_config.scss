@@ -1,19 +1,22 @@
-$header-background: #e08d34;
+$app-background: red;
+$app-text: #ffffff;
+
+$header-background: rgb(9, 7, 46);
 $header-text: #ffffff;
 $header-height: 4rem;
 $header-fontsize: 1.75rem;
 
-$scrollbar-track: #ffffff;
-$scrollbar-thumb: #d494b1;
+$scrollbar-track: red;
+$scrollbar-thumb: orange;
 $scrollbar-width: 0.5rem;
 
-$kirja-border-color: #d494b1 ;
+$kirja-border-color: #ffffff;
 $kirja-padding: 0.75rem ; 
-$kirja-linkki-background: #d494b1 ;
+$kirja-linkki-background: rgb(9, 7, 46);
 $kirja-linkki-text: #ffffff;
 $kirja-linkki-width: 2rem ;
 
 $menu-height: 4rem;
-$menu-background: #d494b1;
+$menu-background: rgb(9, 7, 46);
 $menu-text: #ffffff;
 $menu-fontsize: 1.75rem;
