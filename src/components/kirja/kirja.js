@@ -1,5 +1,6 @@
 import styles from './kirja.module.scss';
 import { FaExclamation } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 function Kirja(props) {
     return(
@@ -10,7 +11,7 @@ function Kirja(props) {
                 <div>{props.data.vuosi}</div>       
             </div>
             <div className={styles.kirja_linkki}>
-                <FaExclamation />
+                <Link to={"/edit/"+props.data.id}><FaExclamation /></Link>
             </div>
         </div>
     );

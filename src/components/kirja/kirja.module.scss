@@ -33,6 +33,10 @@
     align-items: center;
 }
 
+.kirja_linkki a {
+    color: $kirja-linkki-text;
+}
+
 .kirja:hover .kirja_linkki {
     display: flex;
 }

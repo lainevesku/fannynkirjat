@@ -7,9 +7,11 @@ import Kirjat from '../../routes/kirjat/kirjat';
 import Arvostelut from '../../routes/arvostelut/arvostelut';
 import Settings from '../../routes/settings/settings';
 import AddKirja from '../../routes/addkirja/addkirja';
+import EditKirja from '../../routes/editkirja/editkirja';
 import Menu from '../menu/menu';
 import { ButtonAppContainer } from '../../shared/uibuttons/uibuttons';
 import testdata from '../../testdata';
+
 
 function App() {
 
@@ -21,10 +23,20 @@ function App() {
 
   const handleKirjaSubmit = (newkirja) => {
     let storeddata = data.slice();
+    const index = storeddata.findIndex(kirja => kirja.id === newkirja.id);
+    if(index >= 0 ) {
+      storeddata[index] = newkirja;
+    } else {
     storeddata.push(newkirja);
+    }
     setData(storeddata);
   }
 
+  const handleKirjaDelete = (id) => {
+    let storeddata = data.slice();
+    storeddata = storeddata.filter(kirja => kirja.id !== id);
+    setData(storeddata);
+  }
 
   return (
     <ButtonAppContainer>
@@ -43,6 +55,9 @@ function App() {
             </Route>
             <Route path="/add">
               <AddKirja onKirjaSubmit={handleKirjaSubmit} />
+            </Route>
+            <Route path="/edit/:id">
+              <EditKirja onKirjaSubmit={handleKirjaSubmit} data={data} onKirjaDelete={handleKirjaDelete} />
             </Route>
           </Content>
           <Menu />

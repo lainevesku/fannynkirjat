@@ -5,7 +5,7 @@ import { MdMenuBook } from 'react-icons/md';
 
 function Kirjat(props) {
 
-    const kirjat = props.data.map((kirja) => <Kirja key={kirja.id}data={kirja} />);
+    const kirjat = props.data.map((kirja) => <Kirja key={kirja.id} data={kirja} />);
 
     return(
         <ButtonContainer>
