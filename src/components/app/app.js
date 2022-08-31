@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { useFirestore, useFirestoreCollectionData } from 'reactfire';
+import { useFirestore, useFirestoreCollectionData, useUser } from 'reactfire';
 import 'firebase/firestore';
 import 'firebase/auth';
 import styles from './app.module.scss';
@@ -19,7 +19,9 @@ function App() {
 
   const [data, setData] = useState([]);
 
-  const kirjaCollectionRef = useFirestore().collection('kirja');
+  const user = useUser();
+
+  const kirjaCollectionRef = useFirestore().collection('user').doc(user.data.uid).collection('kirja');
   const { data: kirjaCollection } = useFirestoreCollectionData(kirjaCollectionRef.orderBy("kirjailija", "asc"), {initialData: [], idField: "id"});
 
 
