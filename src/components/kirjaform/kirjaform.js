@@ -51,13 +51,13 @@ function KirjaForm(props) {
                 <div className={styles.form_row}>
                     <div>
                         <label htmlFor="kirjailija">Kirjailija</label>
-                        <input type="text" name="kirjailija" onChange={handleChange} value={values.kirjailija} />
+                        <input type="text" name="kirjailija" onChange={handleChange} value={values.kirjailija} required />
                     </div>
                 </div>
                 <div className={styles.form_row}>
                     <div>
                         <label htmlFor="kirjanimi">Kirjan nimi</label>
-                        <input type="text" name="kirjanimi" onChange={handleChange} value={values.kirjanimi} />
+                        <input type="text" name="kirjanimi" onChange={handleChange} value={values.kirjanimi} required />
                     </div>
                 </div>
 
@@ -71,23 +71,23 @@ function KirjaForm(props) {
                 <div className={styles.form_row}>
                     <div>
                         <label htmlFor="sivuja">Sivujen määrä</label>
-                        <input type="number" name="sivuja" onChange={handleChange} value={values.sivuja} />
+                        <input type="number" name="sivuja" onChange={handleChange} value={values.sivuja} min="0" />
                     </div>
 
                     <div>
                         <label htmlFor="vuosi">Ilmestymisvuosi</label>
-                        <input type="number" name="vuosi" onChange={handleChange} value={values.vuosi} />
+                        <input type="number" name="vuosi" onChange={handleChange} value={values.vuosi} min="0" required />
                     </div>
                 </div>
                 
                 <div className={styles.form_row}>
                     <div>
                         <label htmlFor="painos">Kirjan painos</label>
-                        <input type="number" name="painos" onChange={handleChange} value={values.painos} />
+                        <input type="number" name="painos" onChange={handleChange} value={values.painos} min="0"/>
                     </div>
                     <div>
                         <label htmlFor="painosvuosi">Painoksen vuosi</label>
-                        <input type="number" name="painosvuosi" onChange={handleChange} value={values.painosvuosi} />
+                        <input type="number" name="painosvuosi" onChange={handleChange} value={values.painosvuosi} min="0" />
                     </div>
                 </div>
 
