@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { useFirestore, useFirestoreCollectionData } from 'reactfire';
-import 'firebase/firestore' ;
+import 'firebase/firestore';
+import 'firebase/auth';
 import styles from './app.module.scss';
 import Header from '../header/header';
 import Content from '../content/content';

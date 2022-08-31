@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './components/app';
+import Appwrapper from './components/appwrapper';
 import reportWebVitals from './reportWebVitals';
 import { FirebaseAppProvider } from 'reactfire';
 
@@ -18,7 +18,7 @@ const firebaseConfig = {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <FirebaseAppProvider firebaseConfig={firebaseConfig}>
-        <App />
+        <Appwrapper />
     </FirebaseAppProvider>
 );
 
