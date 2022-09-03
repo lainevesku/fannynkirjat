@@ -67,7 +67,7 @@ function InfoKirja(props) {
                         <Link to={"/edit/"+kirja.id}><Button secondary>MUOKKAA</Button></Link>
                     </div>
                     <div>
-                        <Button primary>ARVOSTELE</Button>
+                        <Link to={"/arvostele/"+kirja.id}><Button primary>ARVOSTELE</Button></Link>
                     </div>
                 </div>
             </div>

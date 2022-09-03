@@ -12,6 +12,7 @@ import Settings from '../../routes/settings/settings';
 import AddKirja from '../../routes/addkirja/addkirja';
 import EditKirja from '../../routes/editkirja/editkirja';
 import InfoKirja from '../../routes/infokirja/infokirja';
+import AddArvostelu from '../../routes/addarvostelu/addarvostelu';
 import Menu from '../menu/menu';
 import { ButtonAppContainer } from '../../shared/uibuttons/uibuttons';
 
@@ -61,6 +62,9 @@ function App() {
             </Route>
             <Route path="/info/:id">
               <InfoKirja data={data} />
+            </Route>
+            <Route path="/arvostele/:id">
+              <AddArvostelu onKirjaSubmit={handleKirjaSubmit} data={data} />
             </Route>
           </Content>
           <Menu />
