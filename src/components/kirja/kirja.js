@@ -6,12 +6,12 @@ function Kirja(props) {
     return(
         <div className={styles.kirja}>
             <div className={styles.kirja_data}>
-                <div>{props.data.kirjailija}</div>
                 <div>{props.data.kirjanimi}</div>
+                <div>{props.data.kirjailija}</div>
                 <div>{props.data.vuosi}</div>       
             </div>
             <div className={styles.kirja_linkki}>
-                <Link to={"/edit/"+props.data.id}><FaExclamation /></Link>
+                <Link to={"/info/"+props.data.id}><FaExclamation /></Link>
             </div>
         </div>
     );

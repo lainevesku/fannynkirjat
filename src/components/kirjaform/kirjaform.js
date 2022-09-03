@@ -21,6 +21,7 @@ function KirjaForm(props) {
         kirjailija:     "",
         kirjanimi:      "",
         kirjaalkunimi:  "",
+        genre:          "",
         sivuja:         0,
         vuosi:          0,
         painos:         0,
@@ -54,6 +55,7 @@ function KirjaForm(props) {
                         <input type="text" name="kirjailija" onChange={handleChange} value={values.kirjailija} required />
                     </div>
                 </div>
+
                 <div className={styles.form_row}>
                     <div>
                         <label htmlFor="kirjanimi">Kirjan nimi</label>
@@ -67,13 +69,19 @@ function KirjaForm(props) {
                         <input type="text" name="kirjaalkunimi" onChange={handleChange} value={values.kirjaalkunimi} />
                     </div>
                 </div>
+
+                <div className={styles.form_row}>
+                    <div>
+                        <label htmlFor="genre">Kirjan genre(t)</label>
+                        <input type="text" name="genre" onChange={handleChange} value={values.genre} />
+                    </div>
+                </div>
                     
                 <div className={styles.form_row}>
                     <div>
                         <label htmlFor="sivuja">Sivujen määrä</label>
                         <input type="number" name="sivuja" onChange={handleChange} value={values.sivuja} min="0" />
                     </div>
-
                     <div>
                         <label htmlFor="vuosi">Ilmestymisvuosi</label>
                         <input type="number" name="vuosi" onChange={handleChange} value={values.vuosi} min="0" required />

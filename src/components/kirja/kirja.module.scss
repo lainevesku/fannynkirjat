@@ -35,6 +35,7 @@
 
 .kirja_linkki a {
     color: $kirja-linkki-text;
+    text-decoration: none;
 }
 
 .kirja:hover .kirja_linkki {

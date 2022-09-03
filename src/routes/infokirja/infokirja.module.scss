@@ -1,0 +1,35 @@
+@import '../../assets/styles/config';
+
+.info {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    font-size: 2rem;
+    padding: 0.8rem;
+    
+}
+
+.info_row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0.3rem;
+    border-bottom: 1px solid #ffffff;
+}
+
+.info_kirja {
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+.info_napit {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.info_napit a {
+    color: $kirja-linkki-text;
+    text-decoration: none;
+}
