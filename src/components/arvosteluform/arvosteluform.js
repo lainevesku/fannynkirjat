@@ -3,6 +3,7 @@ import useForm from '../../shared/useform';
 import { Button } from '../../shared/uibuttons/uibuttons';
 import { useHistory } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import { Rating } from '@mui/material';
 
 function ArvosteluForm(props) {
 
@@ -16,7 +17,12 @@ function ArvosteluForm(props) {
     }
 
     const initialState = props.data ? props.data : {
-        arvostelu:      ""
+        arvostelu:      "",
+        rating_kieli:   0,
+        rating_hahmot:  0,
+        rating_juoni:   0,
+        rating_aika:    0,
+        rating_koko:    0
     };
 
     const { values, handleChange, handleSubmit } = useForm(submit, initialState, false);
@@ -40,8 +46,67 @@ function ArvosteluForm(props) {
             <div className={styles.form}>
                 <div className={styles.form_row}>
                     <div>
-                        <label htmlFor="arvostelu">Kirjailija</label>
-                        <input type="textarea" name="arvostelu" onChange={handleChange} value={values.arvostelu} required />
+                        <label htmlFor="rating_kieli">Kieli</label>
+                        <Rating
+                        name="rating_kieli"
+                        value={values.rating_kieli}
+                        onChange={handleChange}
+                        defaultValue={2.5}
+                        precision={0.5}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="rating_hahmot">Hahmot</label>
+                        <Rating 
+                        name="rating_hahmot"
+                        value={values.rating_hahmot} 
+                        onChange={handleChange}
+                        defaultValue={2.5}
+                        precision={0.5}
+                        />
+                    </div>
+                </div>
+
+                <div className={styles.form_row}>
+                    <div>
+                        <label htmlFor="rating_juoni">Juoni</label>
+                        <Rating
+                        name="rating_juoni"
+                        value={values.rating_juoni}
+                        onChange={handleChange}
+                        defaultValue={2.5}
+                        precision={0.5}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="rating_aika">Aikansa edellä</label>
+                        <Rating
+                        name="rating_aika"
+                        value={values.rating_aika}
+                        onChange={handleChange}
+                        defaultValue={2.5}
+                        precision={0.5}
+                        />
+                    </div>
+                </div>
+
+                <div className={styles.form_row}>
+                    <div>
+                    <label htmlFor="rating_koko">Kokonaisuus</label>
+                    <Rating
+                    name="rating_koko"
+                    value={values.rating_koko}
+                    onChange={handleChange}
+                    defaultValue={2.5}
+                    precision={0.5}
+                    />
+                    </div>
+                </div>
+
+                <div className={styles.form_row}>
+                    <div>
+                        <label htmlFor="arvostelu">Kirjoita arvostelu tähän:</label>
+                        <textarea name="arvostelu" onChange={handleChange} value={values.arvostelu} cols="4" rows="8"/>
                     </div>
                 </div>
                 <div className={styles.form_row}>

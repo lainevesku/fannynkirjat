@@ -10,7 +10,7 @@ function AddArvostelu(props) {
     return(
         <>
             <div>
-            <h2>Kirjoita arvostelu kirjasta {kirja.kirjanimi}</h2>
+            <h2>Arvostele kirja {kirja.kirjanimi}</h2>
             <ArvosteluForm onKirjaSubmit={props.onKirjaSubmit} data={kirja} />
             </div>
         </>

@@ -25,6 +25,7 @@ function App() {
 
   const kirjaCollectionRef = useFirestore().collection('user').doc(user.data.uid).collection('kirja');
   const { data: kirjaCollection } = useFirestoreCollectionData(kirjaCollectionRef.orderBy("kirjailija", "asc"), {initialData: [], idField: "id"});
+  //const { data2 } = useFirestoreCollectionData(kirjaCollectionRef.orderBy("rating_koko", "desc"), {initialData: [], idField: "id"}); arvostellut arvostelu sivulle
 
 
   useEffect(() => {

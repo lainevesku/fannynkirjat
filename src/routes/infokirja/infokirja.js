@@ -2,6 +2,7 @@ import styles from './infokirja.module.scss';
 import { useParams } from "react-router-dom";
 import Button from '../../shared/uibuttons';
 import { Link } from 'react-router-dom';
+import { Rating } from '@mui/material';
 
 function InfoKirja(props) {
 
@@ -60,6 +61,12 @@ function InfoKirja(props) {
                 <div className={styles.info_row}>
                     <div>Kirjan sijainti:</div>
                     <div className={styles.info_kirja}>{kirja.sijainti}</div>            
+                </div>
+
+                <div className={styles.info_row}>
+                    <div>Kirjan Tähdet</div>
+                    <div className={styles.info_kirja}>
+                    <Rating name="read-only" value={kirja.rating} readOnly /></div>            
                 </div>
 
                 <div className={styles.info_napit}>
