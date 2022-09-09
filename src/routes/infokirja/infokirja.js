@@ -2,7 +2,6 @@ import styles from './infokirja.module.scss';
 import { useParams } from "react-router-dom";
 import Button from '../../shared/uibuttons';
 import { Link } from 'react-router-dom';
-import { Rating } from '@mui/material';
 
 function InfoKirja(props) {
 
@@ -63,18 +62,12 @@ function InfoKirja(props) {
                     <div className={styles.info_kirja}>{kirja.sijainti}</div>            
                 </div>
 
-                <div className={styles.info_row}>
-                    <div>Kirjan Tähdet</div>
-                    <div className={styles.info_kirja}>
-                    <Rating name="read-only" value={kirja.rating} readOnly /></div>            
-                </div>
-
                 <div className={styles.info_napit}>
                     <div>
-                        <Link to={"/edit/"+kirja.id}><Button secondary>MUOKKAA</Button></Link>
+                        <Link to={"/edit/"+kirja.id}><Button primary>MUOKKAA</Button></Link>
                     </div>
                     <div>
-                        <Link to={"/arvostele/"+kirja.id}><Button primary>ARVOSTELE</Button></Link>
+                        { kirja.rating_koko > 0 ? <Link to={"/arvosteluinfo/"+kirja.id}><Button primary>KIRJAN ARVOSTELU</Button></Link> : <Link to={"/arvostele/"+kirja.id}><Button primary>ARVOSTELE</Button></Link>}
                     </div>
                 </div>
             </div>

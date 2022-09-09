@@ -12,7 +12,7 @@ function Arvostelu(props) {
                 <div>{props.data.rating_koko > 0 ? <Rating value={props.data.rating_koko} precision={0.5} readOnly></Rating> : ""}</div>       
             </div>
             <div className={styles.kirja_linkki}>
-                <Link to={"/info/"+props.data.id}><FaExclamation /></Link>
+                <Link to={"/arvosteluinfo/"+props.data.id}><FaExclamation /></Link>
             </div>
         </div>
     );

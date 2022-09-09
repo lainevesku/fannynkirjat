@@ -1,0 +1,50 @@
+@import '../../assets/styles/config.scss';
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info_row {
+    display: flex;
+    margin-top: 2px;
+}
+
+.info_row > div {
+    display: flex; 
+    flex-direction: column;
+    flex: 1 1;
+    width: 40%;
+    margin: $form-item-margin ;
+}
+
+.info h2, h3 {
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+    padding: 1px;
+}
+
+@media screen and (max-width: 600px) {
+    .info h3 {
+      font-size: 8vw;
+    }
+  }
+
+.info_teksti {
+    display: flex;
+    border: 2px ;
+    margin: 4px;
+    padding: 5px;
+}
+
+.info_napit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.info_napit a {
+    color: $kirja-linkki-text;
+    text-decoration: none;
+}
