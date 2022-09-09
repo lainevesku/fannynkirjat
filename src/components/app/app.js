@@ -20,12 +20,14 @@ import { ButtonAppContainer } from '../../shared/uibuttons/uibuttons';
 function App() {
 
   const [data, setData] = useState([]);
+  
 
   const user = useUser();
 
   const kirjaCollectionRef = useFirestore().collection('user').doc(user.data.uid).collection('kirja');
-  const { data: kirjaCollection } = useFirestoreCollectionData(kirjaCollectionRef.orderBy("kirjailija", "asc"), {initialData: [], idField: "id"});
-  //const { data2 } = useFirestoreCollectionData(kirjaCollectionRef.orderBy("rating_koko", "desc"), {initialData: [], idField: "id"}); arvostellut arvostelu sivulle
+  const { data: kirjaCollection } = useFirestoreCollectionData(kirjaCollectionRef.orderBy("kirjailija"), {initialData: [], idField: "id"}) ;
+  const arvosteluCollectionRef = useFirestore().collection('user').doc(user.data.uid).collection('kirja');
+  const { data: arvosteluCollection }  = useFirestoreCollectionData(arvosteluCollectionRef.orderBy("rating_koko", "desc"), {initialData: [], idField: "id"});
 
 
   useEffect(() => {
@@ -50,7 +52,7 @@ function App() {
               <Kirjat data={data} />
             </Route>
             <Route path="/arvostelut">
-              <Arvostelut />
+              <Arvostelut data={arvosteluCollection}/>
             </Route>
             <Route path="/settings">
               <Settings />
