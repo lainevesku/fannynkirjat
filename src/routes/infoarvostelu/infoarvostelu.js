@@ -66,7 +66,11 @@ function InfoArvostelu(props) {
                     precision={0.5}
                     readOnly
                     />
-                </div>            
+                </div>
+                <div>
+                    <div>Kirja luettu vuonna</div>
+                    {kirja.lukuvuosi}
+                </div>        
         </div>
 
         {kirja.arvostelu === "" ? "" :

@@ -45,6 +45,7 @@ function Settings() {
                     </div>
                 </form>
     </div>*/}
+    <div className={styles.settings_footer}>Background: Photo by Henry Be on Unsplash. Icons: By svgrepo.com.</div>
         </div>
     );
 }

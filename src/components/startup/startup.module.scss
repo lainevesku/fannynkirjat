@@ -1,0 +1,36 @@
+@import '../../assets/styles/config';
+
+.startup {
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    max-width: 35rem; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: url("../../assets/images/henry-be-lc7xcWebECc-unsplash.jpg"); //Photo by Henry Be on Unsplash
+  
+    background-size: 85vh;
+    color: $app-text;
+}
+
+
+.startup_text {
+    margin: 1rem;
+    flex: 1 1 auto;
+    padding: $container-padding;
+}
+
+.startup_text p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.startup_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

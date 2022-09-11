@@ -22,7 +22,8 @@ function ArvosteluForm(props) {
         rating_hahmot:  0,
         rating_juoni:   0,
         rating_aika:    0,
-        rating_koko:    0
+        rating_koko:    0,
+        lukuvuosi:      0
     };
 
     const { values, handleChange, handleSubmit } = useForm(submit, initialState, false);
@@ -92,14 +93,18 @@ function ArvosteluForm(props) {
 
                 <div className={styles.form_row}>
                     <div>
-                    <label htmlFor="rating_koko">Kokonaisuus</label>
-                    <Rating
-                    name="rating_koko"
-                    value={values.rating_koko}
-                    onChange={handleChange}
-                    defaultValue={2.5}
-                    precision={0.5}
-                    />
+                        <label htmlFor="rating_koko">Kokonaisuus</label>
+                        <Rating
+                        name="rating_koko"
+                        value={values.rating_koko}
+                        onChange={handleChange}
+                        defaultValue={2.5}
+                        precision={0.5}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="lukuvuosi">Koska kirja on luettu?</label>
+                        <input type="number" name="lukuvuosi" onChange={handleChange} value={values.lukuvuosi} min="2000" />
                     </div>
                 </div>
 
