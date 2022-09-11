@@ -12,9 +12,9 @@ function InfoArvostelu(props) {
 
     return(
     <div className={styles.info}>
-        <h2>KIRJA ARVOSTELU</h2>
-        <h3>{kirja.kirjanimi}</h3>
-        <h3>{kirja.kirjailija}</h3>
+        <h3>KIRJA ARVOSTELU</h3>
+        <h4>{kirja.kirjanimi}</h4>
+        <h4>{kirja.kirjailija}</h4>
         <div className={styles.info_row}>
                 <div>
                     <div>Kieli</div>

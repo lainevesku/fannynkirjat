@@ -18,19 +18,20 @@
     margin: $form-item-margin ;
 }
 
-.info h2, h3 {
+.info h3, h4 {
     display: flex;
     justify-content: center;
     margin: 3px;
     padding: 1px;
 }
 
+/*
 @media screen and (max-width: 600px) {
     .info h3 {
       font-size: 8vw;
     }
   }
-
+*/
 .info_teksti {
     display: flex;
     border: 2px ;

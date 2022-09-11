@@ -24,15 +24,15 @@ function Settings() {
 */
     return(
         <div className={styles.settings}>
-            <h2>Asetukset</h2>
-            <div>
-                <div>
-                    <img src={user.data.photoURL} alt=""/>
+            <h2>Profiili</h2>
+            <div className={styles.settings_profile}>
+                <div className={styles.settings_user}>
+                    <div><img src={user.data.photoURL} alt=""/></div>
+                    <div>{user.data.displayName} <br /> {user.data.email}</div>
                 </div>
-                <div>
-                    {user.data.displayName} <br /> {user.data.email}
+                <div className={styles.settings_button}>
+                <Button primary onClick={signOut}>Kirjaudu ulos</Button>
                 </div>
-                <Button secondary onClick={signOut}>Kirjaudu ulos</Button>
             </div>
            {/* Jos tulevaisuudessa sijaintiin omia lisäys mahdollisuuksia 2
            <h3>Sijainti lista</h3>
